@@ -1,5 +1,7 @@
 //tc.h
 //заголовочный файл содержит объявления классов и т.п.
+#ifndef TC_H
+#define TC_H
 #include <iostream>
 #include <vector>
 #include <list>
@@ -7,29 +9,14 @@
 #include <numeric> //для accumulate()
 #include "driverslist.h"
 #include "drivers.h"
+#include "DriversInputScreen.h"
+
 using namespace std;
 //////////////////// глобальные методы //////////////////////
 void getaLine(string& inStr); // получение строки текста
 char getaChar(); // получение символа
 
 
-
-////////////////класс DriversInputScreen////////////////////
-//класс DriversInputScreen. Это класс, отвечающий за отображение «экрана»,
-//куда пользователь может ввести данные о новом водителе:
-class DriversInputScreen
-{
-private:
-    DriversList* ptrDriversList;
-    string tName;
-    int FlightNo;
-public:
-    DriversInputScreen(DriversList* ptrTL) : ptrDriversList(ptrTL)
-    {
-        /* тут пусто */
-    }
-    void setDriver(); // добавить данные о водителе
-};
 
 
 
@@ -190,4 +177,6 @@ public:
     ~UserInterface();
     void interact();
 };
+
+#endif
 

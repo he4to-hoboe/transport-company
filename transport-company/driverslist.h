@@ -1,11 +1,9 @@
 //DriversList.h
-#include <iostream>
-#include <vector>
-#include <list>
-#include <string>
+#ifndef DRIVERSLIST_H
+#define DRIVERSLIST_H
+
 #include "drivers.h"
 
-using namespace std;
 
 ///////////////////класс DriversList////////////////////////
 //класс DriversList — список всех водителей.
@@ -23,3 +21,4 @@ public:
     int getFlightNo(string); // возвращает номер рейса
     void display(); // вывод списка водителей
 };
+#endif
