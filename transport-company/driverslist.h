@@ -4,6 +4,7 @@
 
 #include "drivers.h"
 
+using namespace std;
 
 ///////////////////класс DriversList////////////////////////
 //класс DriversList — список всех водителей.

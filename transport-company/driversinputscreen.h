@@ -6,6 +6,9 @@
 
 
 
+
+using namespace std;
+
 ////////////////класс DriversInputScreen////////////////////
 //класс DriversInputScreen. Это класс, отвечающий за отображение «экрана»,
 //куда пользователь может ввести данные о новом водителе:
@@ -22,5 +25,4 @@ public:
     }
     void setDriver(); // добавить данные о водителе
 };
-#endif // DRIVERSINPUTSCREEN_H
-
+#endif

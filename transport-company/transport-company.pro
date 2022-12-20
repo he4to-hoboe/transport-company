@@ -8,7 +8,8 @@ SOURCES += \
     transport-company.cpp \
     drivers.cpp \
     driverslist.cpp \
-    driversinputscreen.cpp
+    driversinputscreen.cpp \
+    flightrevenue.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -17,5 +18,6 @@ HEADERS += \
     tc.h \
     drivers.h \
     driverslist.h \
-    driversinputscreen.h
+    driversinputscreen.h \
+    flightrevenue.h
 
