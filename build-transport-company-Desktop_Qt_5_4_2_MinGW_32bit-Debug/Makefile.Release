@@ -50,7 +50,8 @@ SOURCES       = ..\transport-company\tc.cpp \
 		..\transport-company\driversinputscreen.cpp \
 		..\transport-company\flightrevenue.cpp \
 		..\transport-company\revrecord.cpp \
-		..\transport-company\revinputscreen.cpp 
+		..\transport-company\revinputscreen.cpp \
+		..\transport-company\expenserecord.cpp 
 OBJECTS       = release/tc.o \
 		release/transport-company.o \
 		release/drivers.o \
@@ -58,7 +59,8 @@ OBJECTS       = release/tc.o \
 		release/driversinputscreen.o \
 		release/flightrevenue.o \
 		release/revrecord.o \
-		release/revinputscreen.o
+		release/revinputscreen.o \
+		release/expenserecord.o
 
 DIST          =  tc.h \
 		drivers.h \
@@ -66,14 +68,17 @@ DIST          =  tc.h \
 		driversinputscreen.h \
 		flightrevenue.h \
 		revrecord.h \
-		revinputscreen.h ..\transport-company\tc.cpp \
+		revinputscreen.h \
+		expense.h \
+		expenserecord.h ..\transport-company\tc.cpp \
 		..\transport-company\transport-company.cpp \
 		..\transport-company\drivers.cpp \
 		..\transport-company\driverslist.cpp \
 		..\transport-company\driversinputscreen.cpp \
 		..\transport-company\flightrevenue.cpp \
 		..\transport-company\revrecord.cpp \
-		..\transport-company\revinputscreen.cpp
+		..\transport-company\revinputscreen.cpp \
+		..\transport-company\expenserecord.cpp
 QMAKE_TARGET  = transport-company
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = transport-company.exe
@@ -112,7 +117,7 @@ dist:
 	$(ZIP) transport-company.zip $(SOURCES) $(DIST) ..\transport-company\transport-company.pro ..\..\..\QT\5.4\mingw491_32\mkspecs\features\spec_pre.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\qdevice.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\features\device_config.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\common\shell-win32.conf ..\..\..\QT\5.4\mingw491_32\mkspecs\qconfig.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axbase.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axbase_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axcontainer.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axcontainer_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axserver.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_axserver_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bluetooth.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bluetooth_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_bootstrap_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_clucene_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_concurrent.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_concurrent_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_core.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_core_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_dbus.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_dbus_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_declarative.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_declarative_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designer.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designer_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_designercomponents_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_enginio.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_enginio_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_gui.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_gui_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_help.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_help_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_location.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_location_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimedia.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimedia_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimediawidgets.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_network.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_network_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_nfc.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_nfc_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_opengl.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_opengl_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_openglextensions.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_openglextensions_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_platformsupport_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_positioning.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_positioning_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_printsupport.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_printsupport_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qml.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qml_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmldevtools_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmltest.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qmltest_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quick.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quick_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickparticles_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickwidgets.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_quickwidgets_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_script.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_script_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_scripttools.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_scripttools_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sensors.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sensors_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_serialport.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_serialport_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sql.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_sql_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_svg.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_svg_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_testlib.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_testlib_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_uitools.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_uitools_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webchannel.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webchannel_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkit.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkit_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkitwidgets.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webkitwidgets_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_websockets.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_websockets_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webview.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_webview_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_widgets.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_widgets_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_winextras.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_winextras_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xml.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xml_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xmlpatterns.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\features\qt_functions.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\qt_config.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\win32\qt_config.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\win32-g++\qmake.conf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\spec_post.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\exclusive_builds.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\default_pre.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\win32\default_pre.prf ..\transport-company\deployment.pri ..\..\..\QT\5.4\mingw491_32\mkspecs\features\resolve_config.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\exclusive_builds_post.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\default_post.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\build_pass.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\win32\console.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\win32\rtti.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\precompile_header.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\warn_on.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\testcase_targets.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\exceptions.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\yacc.prf ..\..\..\QT\5.4\mingw491_32\mkspecs\features\lex.prf ..\transport-company\transport-company.pro  NO_PCH_SOURCES YACCSOURCES YACCSOURCES LEXSOURCES 
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\tc.o release\transport-company.o release\drivers.o release\driverslist.o release\driversinputscreen.o release\flightrevenue.o release\revrecord.o release\revinputscreen.o
+	-$(DEL_FILE) release\tc.o release\transport-company.o release\drivers.o release\driverslist.o release\driversinputscreen.o release\flightrevenue.o release\revrecord.o release\revinputscreen.o release\expenserecord.o
 
 distclean: clean 
 	-$(DEL_FILE) $(DESTDIR_TARGET)
@@ -140,7 +145,9 @@ release/tc.o: ../transport-company/tc.cpp ../transport-company/tc.h \
 		../transport-company/DriversInputScreen.h \
 		../transport-company/FlightRevenue.h \
 		../transport-company/revrecord.h \
-		../transport-company/revinputscreen.h
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\tc.o ..\transport-company\tc.cpp
 
 release/transport-company.o: ../transport-company/transport-company.cpp ../transport-company/tc.h \
@@ -149,7 +156,9 @@ release/transport-company.o: ../transport-company/transport-company.cpp ../trans
 		../transport-company/DriversInputScreen.h \
 		../transport-company/FlightRevenue.h \
 		../transport-company/revrecord.h \
-		../transport-company/revinputscreen.h
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\transport-company.o ..\transport-company\transport-company.cpp
 
 release/drivers.o: ../transport-company/drivers.cpp ../transport-company/tc.h \
@@ -158,7 +167,9 @@ release/drivers.o: ../transport-company/drivers.cpp ../transport-company/tc.h \
 		../transport-company/DriversInputScreen.h \
 		../transport-company/FlightRevenue.h \
 		../transport-company/revrecord.h \
-		../transport-company/revinputscreen.h
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\drivers.o ..\transport-company\drivers.cpp
 
 release/driverslist.o: ../transport-company/driverslist.cpp ../transport-company/tc.h \
@@ -167,7 +178,9 @@ release/driverslist.o: ../transport-company/driverslist.cpp ../transport-company
 		../transport-company/DriversInputScreen.h \
 		../transport-company/FlightRevenue.h \
 		../transport-company/revrecord.h \
-		../transport-company/revinputscreen.h
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\driverslist.o ..\transport-company\driverslist.cpp
 
 release/driversinputscreen.o: ../transport-company/driversinputscreen.cpp ../transport-company/tc.h \
@@ -176,7 +189,9 @@ release/driversinputscreen.o: ../transport-company/driversinputscreen.cpp ../tra
 		../transport-company/DriversInputScreen.h \
 		../transport-company/FlightRevenue.h \
 		../transport-company/revrecord.h \
-		../transport-company/revinputscreen.h
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\driversinputscreen.o ..\transport-company\driversinputscreen.cpp
 
 release/flightrevenue.o: ../transport-company/flightrevenue.cpp ../transport-company/tc.h \
@@ -185,7 +200,9 @@ release/flightrevenue.o: ../transport-company/flightrevenue.cpp ../transport-com
 		../transport-company/DriversInputScreen.h \
 		../transport-company/FlightRevenue.h \
 		../transport-company/revrecord.h \
-		../transport-company/revinputscreen.h
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\flightrevenue.o ..\transport-company\flightrevenue.cpp
 
 release/revrecord.o: ../transport-company/revrecord.cpp ../transport-company/tc.h \
@@ -194,7 +211,9 @@ release/revrecord.o: ../transport-company/revrecord.cpp ../transport-company/tc.
 		../transport-company/DriversInputScreen.h \
 		../transport-company/FlightRevenue.h \
 		../transport-company/revrecord.h \
-		../transport-company/revinputscreen.h
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\revrecord.o ..\transport-company\revrecord.cpp
 
 release/revinputscreen.o: ../transport-company/revinputscreen.cpp ../transport-company/tc.h \
@@ -203,8 +222,21 @@ release/revinputscreen.o: ../transport-company/revinputscreen.cpp ../transport-c
 		../transport-company/DriversInputScreen.h \
 		../transport-company/FlightRevenue.h \
 		../transport-company/revrecord.h \
-		../transport-company/revinputscreen.h
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\revinputscreen.o ..\transport-company\revinputscreen.cpp
+
+release/expenserecord.o: ../transport-company/expenserecord.cpp ../transport-company/tc.h \
+		../transport-company/driverslist.h \
+		../transport-company/drivers.h \
+		../transport-company/DriversInputScreen.h \
+		../transport-company/FlightRevenue.h \
+		../transport-company/revrecord.h \
+		../transport-company/revinputscreen.h \
+		../transport-company/expense.h \
+		../transport-company/ExpenseRecord.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\expenserecord.o ..\transport-company\expenserecord.cpp
 
 ####### Install
 

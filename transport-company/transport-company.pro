@@ -11,7 +11,8 @@ SOURCES += \
     driversinputscreen.cpp \
     flightrevenue.cpp \
     revrecord.cpp \
-    revinputscreen.cpp
+    revinputscreen.cpp \
+    expenserecord.cpp
 
 include(deployment.pri)
 qtcAddDeployment()
@@ -23,5 +24,7 @@ HEADERS += \
     driversinputscreen.h \
     flightrevenue.h \
     revrecord.h \
-    revinputscreen.h
+    revinputscreen.h \
+    expense.h \
+    expenserecord.h
 
