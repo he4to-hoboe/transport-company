@@ -1,15 +1,8 @@
 //DriversInputScreen.h
 #ifndef DRIVERSINPUTSCREEN_H
 #define DRIVERSINPUTSCREEN_H
-
-#include "tc.h"
-
-
-
-
+#include "UserInterface.h"
 using namespace std;
-
-////////////////класс DriversInputScreen////////////////////
 //класс DriversInputScreen. Это класс, отвечающий за отображение «экрана»,
 //куда пользователь может ввести данные о новом водителе:
 class DriversInputScreen

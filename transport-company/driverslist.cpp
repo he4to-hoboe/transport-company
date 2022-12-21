@@ -1,9 +1,5 @@
 //DriversList.cpp
-
-#include "tc.h"
-
-//---------------------------------------------------------
-////////////////методы класса DriversList///////////////////
+#include "UserInterface.h"
 DriversList::~DriversList() // деструктор
 {
     while (!setPtrsDrive.empty()) // удаление всех водителей,
@@ -13,12 +9,12 @@ DriversList::~DriversList() // деструктор
         setPtrsDrive.erase(iter);
     }
 }
-//---------------------------------------------------------
+
 void DriversList::insertDriver(Drivers* ptrT)
 {
     setPtrsDrive.push_back(ptrT); // вставка нового водителя в список
 }
-//---------------------------------------------------------
+
 int DriversList::getFlightNo(string tName) // получить номер рейса по имени водителя
 {
     int FlightNo;
@@ -36,7 +32,7 @@ int DriversList::getFlightNo(string tName) // получить номер рей
     }
     return -1; // если нет - возвращаем -1
 }
-//--------------------------------------------------------
+
 
 void DriversList::display() // вывод списка водителей
 {

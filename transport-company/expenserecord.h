@@ -1,8 +1,7 @@
 //ExpenseRecord.h
 #ifndef EXPENSERECORD
 #define EXPENSERECORD
-#include "tc.h"
-///////////////////класс ExpenseRecord/////////////////////
+#include "UserInterface.h"
 //Класс записей о затратах
 class ExpenseRecord
 {

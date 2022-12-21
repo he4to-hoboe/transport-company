@@ -1,8 +1,7 @@
 //AnnualReport.h
 #ifndef ANNUALREPORT
 #define ANNUALREPORT
-#include "tc.h"
-//////////////////класс AnnualReport///////////////////////
+#include "UserInterface.h"
 //Класс годового отчета
 class AnnualReport
 {

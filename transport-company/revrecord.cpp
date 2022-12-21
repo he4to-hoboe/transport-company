@@ -1,6 +1,5 @@
 //RevRecord.cpp
-#include "tc.h"
-/////////////////методы класса RevRecord//////////////////
+#include "UserInterface.h"
 RevRecord::~RevRecord() // деструктор
 { // удалить строки с платежами,
 // удалить указатели из множества.
@@ -11,7 +10,7 @@ RevRecord::~RevRecord() // деструктор
         setPtrsRR.erase(iter);
     }
 }
-//---------------------------------------------------------
+
 void RevRecord::insertRev(int FlightNo, int month, float amount)
 {
     iter = setPtrsRR.begin(); // Инициализация итератора
@@ -29,7 +28,7 @@ void RevRecord::insertRev(int FlightNo, int month, float amount)
     ptrRow->setRev(month, amount); // заносим в нее платеж
     setPtrsRR.push_back(ptrRow); // заносим строку в вектор
 }
-//---------------------------------------------------------
+
 void RevRecord::display() // отобразить все строки с доходами
 {
     cout << "\nNumber\tJan Feb Mar Apr May June July Aug Sept Oct Nov Dec\n" << endl
@@ -56,7 +55,7 @@ void RevRecord::display() // отобразить все строки с дох�
         cout << endl;
     }
 }
-//---------------------------------------------------------
+
 float RevRecord::getSumOfRev() // сумма всех платежей
 {
     float sumRevs = 0.0;

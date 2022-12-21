@@ -1,8 +1,5 @@
 //Файл tc.cpp содержит все определения методов
-
-#include "tc.h"
-
-
+#include "UserInterface.h"
 void getaLine(string& inStr) // получение строки текста
 {
     char temp[21];
@@ -10,39 +7,27 @@ void getaLine(string& inStr) // получение строки текста
     cin.ignore(20, '\n'); //число пропускаемых символов и символ разделения
     inStr = temp;
 }
-//---------------------------------------------------------
+
 char getaChar() // получение символа
 {
     char ch = cin.get();
     cin.ignore(80, '\n'); //число пропускаемых символов и символ разделения
     return ch;
 }
-
-
-
-
-
-
-
-
-
-
 //---------------------------------------------------------
-////////////////методы класса UserInterface//////////////
 UserInterface::UserInterface()
 {
     ptrDriversList = new DriversList;
     ptrRevRecord = new RevRecord;
     ptrExpenseRecord = new ExpenseRecord;
 }
-//---------------------------------------------------------
 UserInterface::~UserInterface()
 {
     delete ptrDriversList;
     delete ptrRevRecord;
     delete ptrExpenseRecord;
 }
-//---------------------------------------------------------
+
 void UserInterface::interact()
 {
     while (true)

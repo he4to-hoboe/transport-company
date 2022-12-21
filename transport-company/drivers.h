@@ -1,12 +1,8 @@
 //Drivers.h
 #ifndef DRIVERS_H
 #define DRIVERS_H
-
-#include "tc.h"
-
-
+#include "UserInterface.h"
 using namespace std;
-//////////////////// класс Drivers (водители) //////////////////
 //Он хранит имя водителя и номер рейса, в котором он находится.
 class Drivers
 {

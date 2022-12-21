@@ -1,14 +1,10 @@
 //ExpenseInputScreen.cpp
-#include "tc.h"
-//--------------------------------------------------------
-//////////////методы класса ExpenseInputScreen/////////////
+#include "UserInterface.h"
 // конструктор
-
 ExpenseInputScreen::ExpenseInputScreen(ExpenseRecord* per) : ptrExpenseRecord(per)
 {
     /*пусто*/
 }
-//------------------------------------------------------
 void ExpenseInputScreen::setExpense()
 {
     int month, day;

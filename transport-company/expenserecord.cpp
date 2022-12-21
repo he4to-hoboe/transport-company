@@ -1,5 +1,5 @@
 //ExpenseRecord.cpp
-#include "tc.h"
+#include "UserInterface.h"
 //////////////////методы класса ExpenseRecord//////////////
 ExpenseRecord::~ExpenseRecord() // деструктор
 { // удалить объекты expense
@@ -11,12 +11,12 @@ ExpenseRecord::~ExpenseRecord() // деструктор
         vectPtrsExpenses.erase(iter);
     }
 }
-//--------------------------------------------------------
+
 void ExpenseRecord::insertExp(Expense* ptrExp)
 {
     vectPtrsExpenses.push_back(ptrExp);
 }
-//---------------------------------------------------------
+
 void ExpenseRecord::display() // распечатываем все расходы
 {
     cout << "\nDate\tRecipient\tAmount\tCategory\n"  // дата\получатель\сумма\категория
@@ -35,7 +35,7 @@ void ExpenseRecord::display() // распечатываем все расход�
         cout << endl;
     }
 }
-//--------------------------------------------------------
+
 // используется при составлении годового отчета
 float ExpenseRecord::displaySummary()
 {

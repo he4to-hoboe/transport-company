@@ -1,8 +1,7 @@
 //RevRecord.h
 #ifndef REVRECORD
 #define REVRECORD
-#include "tc.h"
-//////////////////// класс RevRecord ///////////////////////
+#include "UserInterface.h"
 //класс RevRecord. Он хранит непосредственно записи доходов.
 //С ним будет взаимодействовать экран добавления дохода.
 class RevRecord

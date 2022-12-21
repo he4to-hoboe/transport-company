@@ -1,4 +1,4 @@
-//tc.h
+//UserInterface.h
 //заголовочный файл содержит объявления классов и т.п.
 #ifndef TC_H
 #define TC_H
@@ -17,35 +17,10 @@
 #include "ExpenseRecord.h"
 #include "expenseinputscreen.h"
 #include "annualreport.h"
-
 using namespace std;
 //////////////////// глобальные методы //////////////////////
 void getaLine(string& inStr); // получение строки текста
 char getaChar(); // получение символа
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////Класс UserInterface//////////////////////
 //Главный класс для запуска приложения:
 //этот класс определяет взаимодействие юзера с программой
 class UserInterface

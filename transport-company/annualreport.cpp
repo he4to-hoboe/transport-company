@@ -1,12 +1,11 @@
 //AnnualReport.cpp
-#include "tc.h"
-//---------------------------------------------------------
-////////////////методы класса AnnualReport/////////////////
+#include "UserInterface.h"
+
 //Конструктор
 AnnualReport::AnnualReport(RevRecord* pRR, ExpenseRecord* pER) : ptrRR(pRR), ptrER(pER)
 { /* пусто */
 }
-//---------------------------------------------------------
+
 void AnnualReport::display()
 {
     cout << "Annual Report\n--------------\n" << endl; //Годовой отчет
