@@ -15,6 +15,7 @@
 #include "revinputscreen.h"
 #include "expense.h"
 #include "ExpenseRecord.h"
+#include "expenseinputscreen.h"
 
 using namespace std;
 //////////////////// глобальные методы //////////////////////
@@ -31,16 +32,7 @@ char getaChar(); // получение символа
 
 
 
-////////////////класс ExpenseInputScreen///////////////////
-//Класс для ввода расходов
-class ExpenseInputScreen
-{
-private:
-    ExpenseRecord* ptrExpenseRecord; // запись о расходах
-public:
-    ExpenseInputScreen(ExpenseRecord*);
-    void setExpense();
-};
+
 
 
 
