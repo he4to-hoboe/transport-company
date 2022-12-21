@@ -16,6 +16,7 @@
 #include "expense.h"
 #include "ExpenseRecord.h"
 #include "expenseinputscreen.h"
+#include "annualreport.h"
 
 using namespace std;
 //////////////////// глобальные методы //////////////////////
@@ -38,18 +39,7 @@ char getaChar(); // получение символа
 
 
 
-//////////////////класс AnnualReport///////////////////////
-//Класс годового отчета
-class AnnualReport
-{
-private:
-    RevRecord* ptrRR; // записи доходов
-    ExpenseRecord* ptrER; // записи расходов
-    float expenses, rents; // суммы доходов и расходов
-public:
-    AnnualReport(RevRecord*, ExpenseRecord*);
-    void display(); // отображение годового отчета
-};
+
 
 
 
